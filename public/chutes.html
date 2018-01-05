@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chute</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="js.js"></script>
+
+
+</head>
+<body>
+
+<div id="hypos">
+    <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+
+                <div class="funkyradio">
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox1" onchange="handleChange(this)" />
+                        <label for="checkbox1">Membre douloureux</label>
+                    </div>
+                    <div class="funkyradio-danger">
+                        <input type="checkbox" name="checkbox" id="checkbox2" onchange="handleChange(this)"/>
+                        <label for="checkbox2">Membre déformé</label>
+                    </div>
+
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox"  id="checkbox3" onchange="handleChange(this)"/>
+                        <label for="checkbox3">Articulation douleureuse</label>
+                    </div>
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox4" onchange="handleChange(this)"/>
+                        <label for="checkbox4">Articulation déformée et gonflée</label>
+                    </div>
+
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox5" onchange="handleChange(this)"/>
+                        <label for="checkbox5">Fourmillement du membre</label>
+                    </div>
+
+                    <div class="funkyradio-danger">
+                        <input type="checkbox" name="checkbox"  id="checkbox6" onchange="handleChange(this)"/>
+                        <label for="checkbox6">Trouble de la sensibilité</label>
+                    </div>
+
+
+
+                    <div class="funkyradio-danger">
+                        <input type="checkbox" name="checkbox"  id="checkbox7" onchange="handleChange(this)"/>
+                        <label for="checkbox7">Paralysie totale ou partielle</label>
+                    </div>
+                    <div class="funkyradio-danger">
+                        <input type="checkbox" name="checkbox" id="checkbox8" onchange="handleChange(this)"/>
+                        <label for="checkbox8">Trouble de l'équlibre</label>
+                    </div>
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox9" onchange="handleChange(this)"/>
+                        <label for="checkbox9">Plaie ou bosse sur la tète</label>
+                    </div>
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox10" onchange="handleChange(this)"/>
+                        <label for="checkbox10">Maux de tète inhabituels</label>
+                    </div>
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox11" onchange="handleChange(this)"/>
+                        <label for="checkbox11">Nausée</label>
+                    </div>
+                    <div class="funkyradio-warning">
+                        <input type="checkbox" name="checkbox" id="checkbox12" onchange="handleChange(this)"/>
+                        <label for="checkbox12">Vomissement</label>
+                    </div><div class="funkyradio-warning">
+                    <input type="checkbox" name="checkbox" id="checkbox13" onchange="handleChange(this)"/>
+                    <label for="checkbox13">Saignement par le nez</label>
+                </div>
+
+
+                    <div class="funkyradio-success">
+                        <input type="checkbox" name="checkbox" id="checkbox14" onchange="clearList()"/>
+                        <label for="checkbox14">Aucun de ces signes</label>
+                    </div>
+                </div>
+
+
+            </div>
+    </div>
+
+    <div class="row">
+        <br>
+        <br>
+        <div class="col-md-offset-5 ">
+            <input type="submit" class="btn btn-primary col-md-4" onclick="myFunction()" value="Lancer le diagnostique">
+        </div>
+
+        <br>
+        <br>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+    <h2>Le résultat du diagnostique</h2>
+    <p></p>
+</div>
+
+
+
+</body>
+</html>
