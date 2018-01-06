@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>chute</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+
+    <link href="css/style.css" rel="stylesheet">
+
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
     <script src="js.js"></script>
 
@@ -77,7 +81,8 @@
                     <div class="funkyradio-warning">
                         <input type="checkbox" name="checkbox" id="checkbox12" onchange="handleChange(this)"/>
                         <label for="checkbox12">Vomissement</label>
-                    </div><div class="funkyradio-warning">
+                    </div>
+                    <div class="funkyradio-warning">
                     <input type="checkbox" name="checkbox" id="checkbox13" onchange="handleChange(this)"/>
                     <label for="checkbox13">Saignement par le nez</label>
                 </div>
@@ -86,6 +91,7 @@
                     <div class="funkyradio-success">
                         <input type="checkbox" name="checkbox" id="checkbox14" onchange="clearList()"/>
                         <label for="checkbox14">Aucun de ces signes</label>
+
                     </div>
                 </div>
 
@@ -93,15 +99,16 @@
             </div>
     </div>
 
+
     <div class="row">
         <br>
         <br>
         <div class="col-md-offset-5 ">
-            <input type="submit" class="btn btn-primary col-md-4" onclick="myFunction()" value="Lancer le diagnostique">
+            <input type="submit" class="btn btn-primary col-md-3" onclick="myFunction()" value="Lancer le diagnostique">
         </div>
 
-        <br>
-        <br>
+
+
 
 
     </div>
@@ -116,8 +123,14 @@
 
 <div style="display:none;" id="myDiv" class="animate-bottom">
     <h2>Le résultat du diagnostique</h2>
-    <p></p>
+
 </div>
+
+
+
+
+
+
 
 
 
