@@ -22,9 +22,9 @@
     <meta charset="UTF-8">
     <title>index</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -55,8 +55,21 @@
                 <input name="age"/>
                 <div class="help">1--120</div>
                 <label>Gender <span>*</span></label>
-                <input name="gender"/>
-                <div class="help">Male/Female</div>
+                <br>
+                <div class="gender">
+                    <label class="containerGender">Male
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="containerGender">Female
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+
+
+
                 <button>Login</button>
             </div>
         </div>
@@ -64,17 +77,17 @@
 </div>
 
 
-<div id="pb" class="container">
+<!--<div id="pb" class="container">-->
 
 
-    <div class="row">
+    <!--<div class="row">-->
 
-        <h3 id="ttl">Problems</h3>
+        <!--<h3 id="ttl">Problems</h3>-->
 
-        <ul id="pb_ul" class=" col-xs-12 list-group">
-        </ul>
-    </div>
-</div>
+        <!--<ul id="pb_ul" class=" col-xs-12 list-group">-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
 
 
 
@@ -94,7 +107,7 @@
          */
         function transparent_display(){
             $("#main_c").css({
-                background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('images/doctor.jpg')"
+                background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('../images/doctor.jpg')"
             })
             $("#nav_c").hide();
             $("#pb").hide();
@@ -104,20 +117,21 @@
 
                 if(cnd1 || cnd2){
                     $("#main_c").css({
-                        background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('images/doctor.jpg')"
+                        background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('../images/doctor.jpg')"
                     })
                     $("#nav_c").hide();
                     $("#pb").hide();
 
                 }else{
                     $("#main_c").css({
-                        background:"linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0.1) ), url('images/doctor.jpg')"
+                        background:"linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0.1) ), url('../images/doctor.jpg')"
                     })
                     $("#nav_c").show();
                     $("#pb").show();
 
                 }
             }
+            $('input[name=age],input[name=gender]').change(manage_display);
             $('input[name=age],input[name=gender]').change(manage_display);
             $('input[name=age],input[name=gender]').mouseleave(manage_display);
         }
