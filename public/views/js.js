@@ -1,7 +1,9 @@
 /*this function is added to Array prototype to remove element of specific index ex: myArray.remove(index)   or a range of element from to*/
 
 var script = document.createElement('script');
-script.src = 'js/jquery-3.2.1.min.js';
+script.src = '../js/jquery-3.2.1.min.js';
+
+
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 

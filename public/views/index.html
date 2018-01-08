@@ -7,9 +7,9 @@
 
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -17,19 +17,7 @@
 
 <body>
 
-<div id="nav_c" class="container">
-    <div id="navbar" class="row" >
-        <ul class="men">
-            <center>
-                <li class="navComponent"><a href="">Home</a></li>
-                <li class="navComponent"><a href="chutes.html">Chutes</a></li>
-                <li class="navComponent"><a href="">Theme</a></li>
-                <li class="navComponent"><a href="">About</a></li>
-                <li class="navComponent"><a href="">Contact us</a></li>
-            </center>
-        </ul>
-    </div>
-</div>
+
 
 <div id="main_c" class="container">
     <div class="row">
@@ -66,6 +54,23 @@
 <script>
     $(document).ready(function () {
 
+
+        let navBar=""
+            +"<div id='nav_c' class='container'>"
+                +"<div id='navbar' class='row' >"
+                    +"<ul class='men'>"
+                        +"<center>"
+                            +"<li class='navComponent'><a href=''>Home</a></li>"
+                            +"<li class='navComponent'><a href='chutes.html'>Chutes</a></li>"
+                            +"<li class='navComponent'><a href=''>Theme</a></li>"
+                            +"<li class='navComponent'><a href=''>About</a></li>"
+                            +"<li class='navComponent'><a href=''>Contact us</a></li>"
+                        +"</center>"
+                    +"</ul>"
+                +"</div>"
+            +"</div>"
+        $("body").prepend(navBar)
+
         // Nav Hover
         $(".men center li").on("hover", "a", function(e){
             console.log('hovered')
@@ -79,7 +84,7 @@
          */
         function transparent_display(){
             $("#main_c").css({
-                background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('images/doctor.jpg')"
+                background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('../images/doctor.jpg')"
             })
             $("#nav_c").hide();
             $("#pb").hide();
@@ -89,14 +94,14 @@
 
                 if(cnd1 || cnd2){
                     $("#main_c").css({
-                        background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('images/doctor.jpg')"
+                        background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('../images/doctor.jpg')"
                     })
                     $("#nav_c").hide();
                     $("#pb").hide();
 
                 }else{
                     $("#main_c").css({
-                        background:"linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0.1) ), url('images/doctor.jpg')"
+                        background:"linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0.1) ), url('../images/doctor.jpg')"
                     })
                     $("#nav_c").show();
                     $("#pb").show();

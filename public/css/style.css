@@ -28,7 +28,7 @@
     width: 100vw;
     background: #333;
     position: fixed;
-    z-index: 30;
+    z-index: 50000;
     margin: 0;
     padding: 0;
     left: 0;
@@ -168,8 +168,29 @@
 }
 
 
+#main_chutes{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    padding-top: 52px;
+}
 
+#main_responce{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    padding-top: 82px;
+}
 
+#main_signes{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    
+}
+.animate-bottom{
+    padding-top: 60px;
+}
 
 #loader {
 
