@@ -1,5 +1,4 @@
 /* Center the loader */
-
 * {
     box-sizing: border-box;
     border: 0px;
@@ -11,9 +10,10 @@
     position: fixed;
     height: 52px;
     width: 100vw;
-    background-color: grey;
+    background-color: rgb(3, 2, 2);
 }
 #main_c{
+    top: 0;
     height: 100vh;
     width: 100vw;
     background-size: cover;
@@ -28,6 +28,7 @@
     width: 100vw;
     background: #333;
     position: fixed;
+    z-index: 30;
     margin: 0;
     padding: 0;
     left: 0;
@@ -140,6 +141,33 @@
 #form button:hover {
     background: #561D25;
 }
+
+#pb{
+    width: 240px;
+    position: fixed;
+    z-index: 20;
+    top: 0px;
+    background-color: #561D25;
+    margin-top: 15%;
+    margin-left: 1%;
+    padding-top: 1%;
+    border-radius:10px 10px 10px 10px;
+}
+
+#pb_ul {
+    border-radius:10px 10px 10px 10px;
+    padding: 0;
+}
+
+#ttl{
+    color: white;
+    width: 55%;
+    padding: 0;
+    float: left;
+    text-align: center;
+}
+
+
 
 
 
