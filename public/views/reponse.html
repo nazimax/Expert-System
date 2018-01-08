@@ -179,18 +179,18 @@
 
         var text=""
         if(age<18){
-            text="enfant";
+            text="l'enfant";
         }
         if(age>60&& gender==="male"){
-            text="vieu"
+            text="le vieu"
         }else if(age>60&& gender==="female"){
-            text='vielle';
+            text='la vielle';
         }
         if(age>=18 && age<60 && gender=="male"){
-            text="homme";
+            text="l'homme";
         }
         else if(age>=18 && age<60 && gender=="female"){
-            text="femme";
+            text="la femme";
         }
 
         $('.category').text(text);
@@ -200,9 +200,9 @@
         var age=parseInt(localStorage.getItem("age"));
         var gen=localStorage.getItem("gender")
 
+        //console.log(gen)
 
-
-        //category(age,gen)
+        category(age,gen)
 
 
         let navBar=""

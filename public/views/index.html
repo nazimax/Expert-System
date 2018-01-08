@@ -145,12 +145,6 @@ var gender;
 
                 age=$("input[name=age]").val();
                 localStorage.setItem("age",age)
-                if(cnd1)
-                    gender="male"
-                if(cnd2)
-                    gender="female"
-
-                console.log(gender)
                 if(cnd1 || (cnd2 && cnd3)){
                     $("#main_c").css({
                         background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('../images/doctor.jpg')"
@@ -179,6 +173,7 @@ var gender;
             }else{
                 localStorage.setItem("gender","female");
             }
+            console.log(localStorage.getItem("gender"))
             console.log($("input[name=age]").val())
             $('#form').hide(200)
             $("#steps").show();
