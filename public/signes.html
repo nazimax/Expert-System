@@ -89,13 +89,71 @@
 
 <br>
     <div class="col-md-offset-5 ">
-        <button type="submit" class="btn btn-success col-md-4" onclick="myFunction()" id="secours" style="display: none">Que dois-je faire ?</button>
+        <button type="submit" class="btn btn-success col-md-4" onclick="result()" id="secours" style="display: none">Que dois-je faire ?</button>
     </div>
 
 
 </div>
 
 <script>
+    var toDo=[]
+    function result() {
+        var result=localStorage.getItem("list").split(",");
+
+        result.forEach(function (e) {
+            switchResponse(e)
+        })
+
+        localStorage.setItem('toDo',toDo)
+        location.href='reponse.html'
+    }
+    function switchResponse(element) {
+
+        switch (element){
+            case "checkbox1" :
+            case "checkbox2" :
+            case "checkbox3" :{
+                if(toDo.indexOf('sign13')==-1){
+                    toDo.push('sign13')
+                }
+
+                break;
+            }
+            case "checkbox4" :
+            {
+
+                if(toDo.indexOf('sign4')==-1){
+                    toDo.push('sign4')
+                }
+                break;
+            }
+            case "checkbox5":
+            case "checkbox6":
+            case "checkbox7":
+            case "checkbox8":
+            {
+                if(toDo.indexOf('sign058')==-1){
+                    toDo.push('sign058')
+                }
+
+                break;
+            }
+            case "checkbox9":
+            case "checkbox10":
+            case "checkbox11":
+            case "checkbox12":
+            case "checkbox13":
+            {
+                if(toDo.indexOf('sign0913')==-1){
+                    toDo.push('sign0913')
+                }
+                break;
+            }
+        }
+    }
+
+
+
     $( document ).ready(function() {
 
         $('#myDiv').show();

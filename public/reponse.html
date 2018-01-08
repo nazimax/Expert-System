@@ -171,5 +171,17 @@
 </div>
 
 
+<script>
+    $( document ).ready(function() {
+
+      var todo=localStorage.getItem('toDo').split(',');
+      todo.forEach(function (e) {
+          $("#"+e).show(800)
+
+      })
+    })
+
+</script>
+
 </body>
 </html>
