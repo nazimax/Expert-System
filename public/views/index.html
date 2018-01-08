@@ -47,7 +47,7 @@
 </div>
 
 <div id="main_c" class="container">
-    <div class="row">
+    <div class="row" id="rf">
         <div class="col-xs-4 col-xs-offset-4">
             <div id="form" >
                 <header>Login</header>
@@ -61,9 +61,9 @@
                         <input id="male" type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="containerGender">Female
-                        <input id="female" type="radio" name="radio">
-                        <span class="checkmark"></span>
+                    <label class="containerGender" >Female
+                        <input  id="female" type="radio" name="radio">
+                        <span class="checkmark" ></span>
                     </label>
                 </div>
 
@@ -74,6 +74,27 @@
             </div>
         </div>
     </div>
+    <div id = "steps" class="row">
+        <div id="stp1" class="col-xs-4 ">
+            <center>
+                <h1> Step1</h1>
+                <p>Symptomes</p>
+            </center>
+        </div>
+        <div id="stp2" class="col-xs-4 ">
+            <center>
+                <h1> Step2</h1>
+                <p>Diagnostic</p>
+            </center>
+        </div>
+        <div id="stp3" class="col-xs-4 ">
+            <center>
+                <h1> Step3</h1>
+                <p>Que fair</p>
+            </center>
+        </div>
+    </div>
+
 </div>
 
 
@@ -114,6 +135,8 @@ var gender;
                 background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('../images/doctor.jpg')"
             })
             $("#nav_c").hide();
+            $("#steps").hide();
+
             $("#pb").hide();
             manage_display = function() {
                 let cnd1 = $("input[name=age]").val()=="";
@@ -127,7 +150,6 @@ var gender;
                 if(cnd2)
                     gender="female"
 
-                localStorage.setItem("gender",gender);
                 console.log(gender)
                 if(cnd1 || (cnd2 && cnd3)){
                     $("#main_c").css({
@@ -151,14 +173,16 @@ var gender;
 
 
             if($("#male").is(':checked')){
+                localStorage.setItem("gender","male");
 
-                console.log("male")
 
             }else{
-                console.log("female")
+                localStorage.setItem("gender","female");
             }
             console.log($("input[name=age]").val())
             $('#form').hide(200)
+            $("#steps").show();
+
             manage_display()
 
 

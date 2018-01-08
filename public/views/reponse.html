@@ -63,7 +63,7 @@
                 <blockquote class="blockquote bq-warning col-md-offset-1">
                     <p class="bq-title"><strong>Surveillance</strong></p>
 
-                    <p class="blockquote" style="font-size : 17px">Surveiller l’enfant en attendant</p>
+                    <p class="blockquote" style="font-size : 17px">Surveiller <em class="category"> l’enfant </em> en attendant</p>
                 </blockquote>
 
 
@@ -96,7 +96,7 @@
                 <blockquote class="blockquote bq-warning ">
                     <p class="bq-title"><strong>Surveillance</strong></p>
 
-                    <p class="blockquote" style="font-size : 17px">Surveiller l’enfant en attendant</p>
+                    <p class="blockquote" style="font-size : 17px">Surveiller <em class="category"> l’enfant </em> en attendant</p>
                 </blockquote>
 
 
@@ -121,7 +121,7 @@
                 <blockquote class="blockquote bq-warning ">
                     <p class="bq-title"><strong>Surveillance</strong></p>
 
-                    <p class="blockquote" style="font-size : 17px">Surveillez l’enfant jusqu'à l'arrivée des secours et prêtez attention à d'éventuels signes</p>
+                    <p class="blockquote" style="font-size : 17px">Surveillez <em class="category"> l’enfant </em> jusqu'à l'arrivée des secours et prêtez attention à d'éventuels signes</p>
                 </blockquote>
 
 
@@ -173,6 +173,10 @@
 
 <script>
     function category(age,gender) {
+
+        console.log(age )
+        console.log(gender )
+
         var text=""
         if(age<18){
             text="enfant";
@@ -189,10 +193,18 @@
             text="femme";
         }
 
+        $('.category').text(text);
     }
 
     $( document ).ready(function() {
-        console.log(localStorage.getItem("age"))
+        var age=parseInt(localStorage.getItem("age"));
+        var gen=localStorage.getItem("gender")
+
+
+
+        //category(age,gen)
+
+
         let navBar=""
             +"<div id='nav_c' class='container'>"
                 +"<div id='navbar' class='row' >"
