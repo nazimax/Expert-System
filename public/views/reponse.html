@@ -172,8 +172,27 @@
 </div>
 
 <script>
-    $( document ).ready(function() {
+    function category(age,gender) {
+        var text=""
+        if(age<18){
+            text="enfant";
+        }
+        if(age>60&& gender==="male"){
+            text="vieu"
+        }else if(age>60&& gender==="female"){
+            text='vielle';
+        }
+        if(age>=18 && age<60 && gender=="male"){
+            text="homme";
+        }
+        else if(age>=18 && age<60 && gender=="female"){
+            text="femme";
+        }
 
+    }
+
+    $( document ).ready(function() {
+        console.log(localStorage.getItem("age"))
         let navBar=""
             +"<div id='nav_c' class='container'>"
                 +"<div id='navbar' class='row' >"
