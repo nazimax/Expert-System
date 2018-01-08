@@ -1,4 +1,11 @@
 /*this function is added to Array prototype to remove element of specific index ex: myArray.remove(index)   or a range of element from to*/
+
+var script = document.createElement('script');
+script.src = 'js/jquery-3.2.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+
 Array.prototype.remove = function(from, to) {
     var rest = this.slice((to || from) + 1 || this.length);
     this.length = from < 0 ? this.length + from : from;
@@ -39,6 +46,8 @@ function handleChange(checkbox) {
     if(checkbox.checked == true){
         list.push(checkbox.id)
         console.log(list)
+        console.log(checkbox);
+        $('#checkbox14').prop('checked',false)
     }
     else{
         var index= list.indexOf(checkbox.id);
@@ -111,7 +120,8 @@ function signes() {
         switchArray(e)
     })
     console.log(sign)
-    localStorage.setItem("SIGN",sign)
+    localStorage.setItem("SIGN",sign);
+    localStorage.setItem("list",list);
     location.href="signes.html";
 
 }

@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <title>A Pen by  Zoltan Kohalmy</title>
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
 </head>
+
 <body>
-<!--<img src="images/doctor.jpg" alt="">-->
+
+<div id="nav_c" class="container">
+    <div id="navbar" class="row" >
+        <ul class="men">
+            <center>
+                <li class="navComponent"><a href="">Home</a></li>
+                <li class="navComponent"><a href="">Content</a></li>
+                <li class="navComponent"><a href="">Theme</a></li>
+                <li class="navComponent"><a href="">About</a></li>
+                <li class="navComponent"><a href="">Contact us</a></li>
+            </center>
+        </ul>
+    </div>
+</div>
+
+<div id="main_c" class="container">
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <div id="form" >
+                <header>Login</header>
+                <label>Votre age <span>*</span></label>
+                <input name="age"/>
+                <div class="help">At least 6 character</div>
+                <label>Gender <span>*</span></label>
+                <input name="gender"/>
+                <div class="help">Use upper and lowercase lettes as well</div>
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="pb" class="container">
+
+
+    <div class="row">
+
+        <h3 id="ttl">Problems</h3>
+
+        <ul id="pb_ul" class=" col-xs-12 list-group">
+        </ul>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        // Nav Hover
+        $(".men center li").on("hover", "a", function(e){
+            console.log('hovered')
+            var $target = $(e.currentTarget);
+            $target.style.color="black";
+        })
+
+        /*
+         ** When user is not logged (Flou + no navbar)
+         ** When user inter data (can display)
+         */
+        function transparent_display(){
+            $("#main_c").css({
+                background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('images/doctor.jpg')"
+            })
+            $("#nav_c").hide();
+            $("#pb").hide();
+            manage_display = function() {
+                let cnd1 = $("input[name=age]").val()=="";
+                let cnd2 = $("input[name=gender]").val()=="";
+
+                if(cnd1 || cnd2){
+                    $("#main_c").css({
+                        background:"linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255,1) ), url('images/doctor.jpg')"
+                    })
+                    $("#nav_c").hide();
+                    $("#pb").hide();
+
+                }else{
+                    $("#main_c").css({
+                        background:"linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0.1) ), url('images/doctor.jpg')"
+                    })
+                    $("#nav_c").show();
+                    $("#pb").show();
+
+                }
+            }
+            $('input[name=age],input[name=gender]').change(manage_display);
+            $('input[name=age],input[name=gender]').mouseleave(manage_display);
+        }
+        transparent_display();
+
+
+        /*
+         ** Create list of choises (Problems)
+         */
+        function problems (){
+            let prob = ["chutes", "coupures", "brulures"];
+
+            prob.forEach(function(e, i) {
+
+                $("#pb_ul").append(
+
+                        $("<li>").addClass("list-group-item").append(
+
+                                $("<a>").addClass("list-group-item").hover()
+                                        .attr({
+                                            href: "/"+e
+                                        }).text(e)
+                        )
+                )
+            });
+
+        }
+        problems();
+
+    })
+
+
+
+</script>
 </body>
+
 </html>
